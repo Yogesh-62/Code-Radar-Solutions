@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
- {
+int main() {
     int a, b;
     printf("Enter two space-separated integers: ");
     scanf("%d %d", &a, &b);
@@ -11,4 +10,5 @@ int main()
     
     return 0;
 }
+
 
