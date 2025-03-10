@@ -1,17 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int number, shift, result;
-    
-    // Taking input
+    int number, shift;
     printf("Enter the number and the number of positions to shift: ");
     scanf("%d %d", &number, &shift);
     
-    // Performing the left shift operation
-    result = number << shift;
-    
-    // Printing the result
-    printf("The result of %d << %d = %d\n", number, shift, result);
+    int result = number << shift;
+    printf("Result of %d left-shifted by %d positions is %d\n", number, shift, result);
     
     return 0;
 }
+
