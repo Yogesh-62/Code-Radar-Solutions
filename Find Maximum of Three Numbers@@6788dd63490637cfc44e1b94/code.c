@@ -1,14 +1,16 @@
-// Your code here...
 #include <stdio.h>
 
 int main(){
-    int x,y,z;
-    scanf("%d %d %d", &x, &y, &z);
-    if(x+y>z && y+z>x && z+x>y){
-        printf("Valid\n");
+    int a,b,c;
+    scanf("%d %d %d", &a, &b, &c);
+    if(a>b && a>c){
+        printf("%d\n", a);
+    }
+    else if(b>c && b>a){
+        printf("%d\n", b);
     }
     else{
-        printf("Invalid\n");
+        printf("%d\n", c);
     }
     return 0;
 }
