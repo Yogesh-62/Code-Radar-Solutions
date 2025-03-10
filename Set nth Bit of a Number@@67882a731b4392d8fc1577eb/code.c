@@ -2,14 +2,18 @@
 
 int main() {
     int number, n;
-    printf("Enter number and bit position (0-based):\n");
+
+    // Read the input
     scanf("%d %d", &number, &n);
 
-    // Set the nth bit of the number to 1
-    int updated_number = number | (1 << n);
+    // Create the mask
+    int mask = 1 << n;
 
-    // Output the updated number
-    printf("Updated number: %d\n", updated_number);
+    // Set the nth bit using bitwise OR
+    int result = number | mask;
+
+    // Print the result
+    printf("%d\n", result);
 
     return 0;
 }
