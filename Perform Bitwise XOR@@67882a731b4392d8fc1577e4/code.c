@@ -1,17 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int num1, num2, result;
+    int a, b;
+    printf("Enter two space-separated integers: ");
+    scanf("%d %d", &a, &b);
     
-    // Taking input
-    printf("Enter two integers: ");
-    scanf("%d %d", &num1, &num2);
-    
-    // Performing bitwise XOR operation
-    result = num1 ^ num2;
-    
-    // Printing the result
-    printf("The result of %d ^ %d = %d\n", num1, num2, result);
+    int result = a ^ b;
+    printf("Result of %d XOR %d is %d\n", a, b, result);
     
     return 0;
 }
