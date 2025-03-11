@@ -21,7 +21,7 @@ int main() {
     scanf("%f", &threshold);
 
     for (int i = 0; i < N; i++) {
-        if (students[].marks > threshold;) {
+        if (students[i].marks > threshold) {
             count++;
         }
     }
