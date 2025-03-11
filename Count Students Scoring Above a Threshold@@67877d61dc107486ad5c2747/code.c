@@ -15,7 +15,7 @@ int main() {
     int count = 0;
 
     for (int i = 0; i < N; i++) {
-        scanf("%d %s %f", &students[i].rollNumber, students[j].name, &students[i].marks);
+        scanf("%d %s %f", &students[N].rollNumber, students[N].name, &students[N].marks);
     }
 
     scanf("%f", &threshold);
