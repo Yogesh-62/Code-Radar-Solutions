@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 struct Student {
-    int rollNumber;
-    char name[50];
+    int roll;
+    char name[50]; // Assuming a maximum name length of 50 characters
     float marks;
 };
 
@@ -10,9 +10,10 @@ int main() {
     int N;
     scanf("%d", &N);
 
-    struct Student students[N];
+    struct Student students[N]; // Array to store student data
+
     for (int i = 0; i < N; i++) {
-        scanf("%d %s %f", &students[i].rollNumber, students[i].name, &students[i].marks);
+        scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks);
     }
 
     float threshold;
