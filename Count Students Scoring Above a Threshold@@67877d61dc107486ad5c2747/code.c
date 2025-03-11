@@ -8,7 +8,6 @@ struct Student {
 
 int main() {
     int N;
-    printf("Enter the number of students: ");
     scanf("%d", &N);
 
     struct Student students[N];
@@ -16,11 +15,9 @@ int main() {
     int count = 0;
 
     for (int i = 0; i < N; i++) {
-        printf("Enter roll number, name, and marks for student %d: ", i + 1);
         scanf("%d %s %f", &students[i].rollNumber, students[i].name, &students[i].marks);
     }
 
-    printf("Enter the threshold: ");
     scanf("%f", &threshold);
 
     for (int i = 0; i < N; i++) {
