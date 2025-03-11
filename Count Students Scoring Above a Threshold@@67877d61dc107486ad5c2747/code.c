@@ -1,32 +1,34 @@
 #include <stdio.h>
 
 struct Student {
-    int roll;
-    char name[50]; // Assuming a maximum name length of 50 characters
+    int rollNumber;
+    char name[50];
     float marks;
 };
 
 int main() {
     int N;
+    printf("Enter the number of students: ");
     scanf("%d", &N);
 
-    struct Student students[N]; // Array to store student data
+    struct Student students[N];
+    float threshold;
+    int count = 0;
 
     for (int i = 0; i < N; i++) {
-        scanf("%d %s %f", &students[i].roll, students[i].name, &students[i].marks);
+        printf("Enter roll number, name, and marks for student %d: ", i + 1);
+        scanf("%d %s %f", &students[i].rollNumber, students[i].name, &students[i].marks);
     }
 
-    float threshold;
     scanf("%f", &threshold);
 
-    int count = 0;
     for (int i = 0; i < N; i++) {
         if (students[i].marks > threshold) {
             count++;
         }
     }
 
-    printf("%d\n", count);
+    printf("Number of students scoring above the threshold: %d\n", count);
 
     return 0;
 }
