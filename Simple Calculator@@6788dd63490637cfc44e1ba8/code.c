@@ -6,8 +6,8 @@ int main() {
 
     scanf("%d %d %c", &num1, &num2, &operator);
 
-    // Consume any leading whitespace before reading the operator
-    scanf(" %c", &operator); // Add a space before %c
+
+    scanf(" %c", &operator); 
 
     switch (operator) {
         case '+':
