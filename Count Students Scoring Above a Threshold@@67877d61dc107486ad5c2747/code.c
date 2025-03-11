@@ -18,6 +18,7 @@ int main() {
         scanf("%d %s %f", &students[i].rollNumber, students[i].name, &students[i].marks);
     }
 
+    printf("Enter the threshold: ");
     scanf("%f", &threshold);
 
     for (int i = 0; i < N; i++) {
@@ -30,3 +31,4 @@ int main() {
 
     return 0;
 }
+
