@@ -14,7 +14,8 @@ int main() {
     struct Student students[N];
     float totalMarks = 0;
 
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++);
+    {
         printf("Enter roll number, name, and marks for student %d: ", i + 1);
         scanf("%d %s %f", &students[i].rollNumber, students[i].name, &students[i].marks);
         totalMarks += students[i].marks;
