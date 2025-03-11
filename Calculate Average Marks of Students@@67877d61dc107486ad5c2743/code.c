@@ -8,18 +8,18 @@ struct Student {
 
 int main() {
     int N;
-    scanf("%d", &N)
+    scanf("%d", &N);
 
     struct Student students[N];
     float totalMarks = 0;
 
-    for (int i = 0; i < N; i++);
+    for (int i = 0; i < N; i++)
     {
         scanf("%d %s %f", &students[i].rollNumber, students[i].name, &students[i].marks);
         totalMarks += students[i].marks;
     }
 
-    float averageMarks = totalMarks / N;
+    float averageMarks = TotalMarks / N;
     printf("Average Marks: %.2f\n", averageMarks);
 
     return 0;
