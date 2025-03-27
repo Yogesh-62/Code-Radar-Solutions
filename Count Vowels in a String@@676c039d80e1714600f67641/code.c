@@ -1,22 +1,29 @@
 #include <stdio.h>
 #include <string.h>
-
-int countVowels(char *str) {
-    int count = 0;
-    for (int i = 0; i < strlen(str); i++) {
-        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
-            str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U') {
-            count++;
-        }
-    }
-    return count;
-}
+#include <ctype.h>
 
 int main() {
-    char str[100];
-    printf("Enter a string: ");
-    scanf("%s", str);
-    int result = countVowels(str);
-    printf("Number of vowels: %d\n", result);
+    char str[100]; // Assuming a maximum string length of 100
+
+    // Read the input string
+    fgets(str, sizeof(str), stdin);
+
+    // Remove the trailing newline character, if present
+    int len = strlen(str);
+    if (len > 0 && str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+    }
+
+    int vowelCount = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        char ch = tolower(str[i]); // Convert to lowercase for case-insensitivity
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            vowelCount++;
+        }
+    }
+
+    // Print the number of vowels
+    printf("%d\n", vowelCount);
+
     return 0;
 }
